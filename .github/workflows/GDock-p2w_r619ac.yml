@@ -2,8 +2,12 @@ name: GDock-p2w_r619ac
 
 on:
   repository_dispatch:
-#  release:
-#    types: published
+  workflow_dispatch:
+    inputs:
+      ssh:
+        description: 'SSH connection to Actions'
+        required: false
+        default: 'false'
   push:
     branches:
       - master
