@@ -21,8 +21,8 @@ env:
   Get_Imgs_SH: aarch64/getImgs.sh
   DOCKER_BUILD_SH: buildImage.sh
 #   SSH_ACTIONS: false
-  UPLOAD_BIN_DIR: false
-  UPLOAD_FIRMWARE: false
+  UPLOAD_BIN_DIR: true
+  UPLOAD_FIRMWARE: true
   TZ: Asia/Shanghai
   FILE_NAME: Files4Build
   PRODUCT_NAME: ARMv8_FOL
