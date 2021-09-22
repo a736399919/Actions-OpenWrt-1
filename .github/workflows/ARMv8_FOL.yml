@@ -9,10 +9,6 @@ on:
       - master
     paths:
       - 'aarch64/ARMv8_FOL.config'
-  schedule:
-    - cron: 0 16 * * *
-  watch:
-    types: started
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
