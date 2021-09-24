@@ -48,15 +48,15 @@ jobs:
         sudo mkdir -p /workdir
         sudo chown $USER:$GROUPS /workdir
         
-    - name: Download rootfs.tar.gz 
-      run: |
-        wget https://github.com/HoldOnBro/Actions-OpenWrt/releases/download/Files4Build/SF-openwrt-armvirt-64-default-rootfs.tar.gz 
-        mv SF-openwrt-armvirt-64-default-rootfs.tar.gz openwrt-armvirt-64-default-rootfs.tar.gz
+#    - name: Download rootfs.tar.gz 
+#      run: |
+#        wget https://github.com/HoldOnBro/Actions-OpenWrt/releases/download/Files4Build/SF-openwrt-armvirt-64-default-rootfs.tar.gz 
+#        mv SF-openwrt-armvirt-64-default-rootfs.tar.gz openwrt-armvirt-64-default-rootfs.tar.gz
       
     - name: Package Armvirt as OpenWrt
       uses: unifreq/openwrt_packit@master
       env:
-        OPENWRT_ARMVIRT: openwrt-armvirt-64-default-rootfs.tar.gz
+        OPENWRT_ARMVIRT: https://static-yz-cdn.c-t.work/QN_FOG_anonymous%2F9e71c37b-7ddc-4abe-b17f-00709d78a8c4%2Fopenwrt-armvirt-64-default-rootfs.tar.gz?t-s=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJndWlkK3RpbWVzdGFtcCI6Imlsb3ZlY293dHJhbnNmZXIyMDIxXzE2MzI0OTA2Njc4NzYifQ.XuB-SLC4jh4CPoxTlK86H2mc_1Rrww8kSBoFlRuljHI&t-c=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJndWlkK3RpbWVzdGFtcCI6IjIwMjF8OXwyNHwyMSJ9.JbGErLPYMkaZRtGUd_PAHkMlMeMSuONM8rOBTzCWdEs&attname=openwrt-armvirt-64-default-rootfs.tar.gz
         PACKAGE_SOC: s905
         KERNEL_VERSION_NAME: 5.10.68
         KERNEL_AUTO_LATEST: true
