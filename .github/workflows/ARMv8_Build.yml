@@ -69,11 +69,11 @@ jobs:
 #        name: OpenWrt_bin${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
 #        path: openwrt/bin/targets/*/*/bin.tar.gz
 
-    - name: Upload firmware directory
-      uses: actions/upload-artifact@master
-      with:
-        name: S905${{ env.PACKAGED_OUTPUTDATE }}
-        path: ${{ env.PACKAGED_OUTPUTPATH }}/*
+#    - name: Upload firmware directory
+#      uses: actions/upload-artifact@master
+#      with:
+#        name: S905${{ env.PACKAGED_OUTPUTDATE }}
+#        path: ${{ env.PACKAGED_OUTPUTPATH }}/*
         
     - name: Upload firmware to cowtransfer
       id: cowtransfer
