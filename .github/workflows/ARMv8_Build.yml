@@ -61,7 +61,6 @@ jobs:
         KERNEL_VERSION_NAME: 5.4.145
         KERNEL_AUTO_LATEST: true
         GZIP_IMGS: true
-        WHOAMI: FK
 
 #    - name: Upload bin directory
 #      uses: actions/upload-artifact@master
@@ -70,11 +69,11 @@ jobs:
 #        name: OpenWrt_bin${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
 #        path: openwrt/bin/targets/*/*/bin.tar.gz
 
-#    - name: Upload firmware directory
-#      uses: actions/upload-artifact@master
-#      with:
-#        name: S905${{ env.PACKAGED_OUTPUTDATE }}
-#        path: ${{ env.PACKAGED_OUTPUTPATH }}/*
+    - name: Upload firmware directory
+      uses: actions/upload-artifact@master
+      with:
+        name: S905${{ env.PACKAGED_OUTPUTDATE }}
+        path: ${{ env.PACKAGED_OUTPUTPATH }}/*
         
     - name: Upload firmware to cowtransfer
       id: cowtransfer
